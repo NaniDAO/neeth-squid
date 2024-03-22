@@ -1,0 +1,17 @@
+manifestVersion: subsquid.io/v0.1
+name: neeth-squid 
+version: 1
+description: A squid for NEETH
+build:
+deploy:
+  addons:
+    postgres:
+    rpc:
+      - arbitrum-one.http
+  processor:
+    - name: processor
+      cmd:
+        - sqd
+        - process:prod
+  api:
+    cmd: [ "sqd", "serve:prod" ]

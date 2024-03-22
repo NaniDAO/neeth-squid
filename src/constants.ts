@@ -1,0 +1,1 @@
+export const NEETH_ADDRESS = '0x00000000000009B4AB3f1bC2b029bd7513Fbd8ED'.toLowerCase();

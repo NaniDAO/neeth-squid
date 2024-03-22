@@ -1,0 +1,32 @@
+type Approval @entity {
+  id: ID!
+  block: Int!
+  owner: String! @index
+  spender: String! @index
+  amount: BigInt!
+  
+  txHash: String!
+  timestamp: BigInt! @index
+}
+
+type Transfer @entity {
+  id: ID!
+  from: String! @index
+  to: String! @index
+  amount: BigInt!
+
+  txHash: String!
+  timestamp: BigInt! @index
+}
+
+type Deposit @entity {
+  id: ID!
+
+  depositor: String! 
+  account: String! @index
+  amount: BigInt!
+  fee: BigInt
+
+  txHash: String!
+  timestamp: BigInt! @index
+}
